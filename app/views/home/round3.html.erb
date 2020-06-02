@@ -1,0 +1,89 @@
+<section class="page-section">
+  <div class="container">
+    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Round 3</h2>
+    <!-- Icon Divider-->
+    <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+    </div>
+
+    <%= form_tag home_round3_path, method: :post do %>
+
+      <div class="form-group row">
+        <%= label_tag :answer_nr30, "1:", class: "col-sm-2 col-form-label" %>
+        <div class="col-sm-10">
+          <%= text_field_tag :answer_nr30, "", class: "form-control", placeholder: "vieta jusu atsakymui" %>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <%= label_tag :answer_nr31, "2:", class: "col-sm-2 col-form-label" %>
+        <div class="col-sm-10">
+          <%= text_field_tag :answer_nr31, "", class: "form-control", placeholder: "vieta jusu atsakymui" %>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <%= label_tag :answer_nr32, "3:", class: "col-sm-2 col-form-label" %>
+        <div class="col-sm-10">
+          <%= text_field_tag :answer_nr32, "", class: "form-control", placeholder: "vieta jusu atsakymui" %>
+        </div>
+      </div>
+
+     <div class="form-group row">
+        <%= label_tag :answer_nr33, "4:", class: "col-sm-2 col-form-label" %>
+        <div class="col-sm-10">
+          <%= text_field_tag :answer_nr33, "", class: "form-control", placeholder: "vieta jusu atsakymui" %>
+        </div>
+      </div>
+
+     <div class="form-group row">
+        <%= label_tag :answer_nr34, "5:", class: "col-sm-2 col-form-label" %>
+        <div class="col-sm-10">
+          <%= text_field_tag :answer_nr34, "", class: "form-control", placeholder: "vieta jusu atsakymui" %>
+        </div>
+      </div>
+
+     <div class="form-group row">
+        <%= label_tag :answer_nr35, "6:", class: "col-sm-2 col-form-label" %>
+        <div class="col-sm-10">
+          <%= text_field_tag :answer_nr35, "", class: "form-control", placeholder: "vieta jusu atsakymui" %>
+        </div>
+      </div>
+
+     <div class="form-group row">
+        <%= label_tag :answer_nr36, "7:", class: "col-sm-2 col-form-label" %>
+        <div class="col-sm-10">
+          <%= text_field_tag :answer_nr36, "", class: "form-control", placeholder: "vieta jusu atsakymui" %>
+        </div>
+      </div>
+
+     <div class="form-group row">
+        <%= label_tag :answer_nr37, "8:", class: "col-sm-2 col-form-label" %>
+        <div class="col-sm-10">
+          <%= text_field_tag :answer_nr37, "", class: "form-control", placeholder: "vieta jusu atsakymui" %>
+        </div>
+      </div>
+
+     <div class="form-group row">
+        <%= label_tag :answer_nr38, "9:", class: "col-sm-2 col-form-label" %>
+        <div class="col-sm-10">
+          <%= text_field_tag :answer_nr38, "", class: "form-control", placeholder: "vieta jusu atsakymui" %>
+        </div>
+      </div>
+
+     <div class="form-group row">
+        <%= label_tag :answer_nr39, "10:", class: "col-sm-2 col-form-label" %>
+        <div class="col-sm-10">
+          <%= text_field_tag :answer_nr39, "", class: "form-control", placeholder: "vieta jusu atsakymui" %>
+        </div>
+      </div>
+
+
+      <%= submit_tag 'Submit', class: "btn btn-primary", style: "float:right", data: { confirm: 'Tikrai tikrai?' } %>
+    <% end %>
+
+  </div>
+</section>
+

@@ -1,74 +1,112 @@
 <section class="page-section">
   <div class="container">
+    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Round 1</h2>
+    <!-- Icon Divider-->
+    <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+    </div>
+
     <%= form_tag home_round1_path, method: :post do %>
 
       <div class="form-group row">
         <%= label_tag :answer_nr10, "1:", class: "col-sm-2 col-form-label" %>
         <div class="col-sm-10">
-          <%= text_field_tag :answer_nr10, "", class: "form-control", placeholder: "vieta jusu atsakymui" %>
+ 
+          <%= link_to "tiesa", { controller: "home", action: "trigger0", choice: true }, class: "btn #{'btn-warning' if @team.answ10}" %>
+          <%= link_to "melas", { controller: "home", action: "trigger0", choice: false }, class: "btn #{'btn-warning' if !@team.answ10 && !@team.answ10.nil?}" %>
+
         </div>
       </div>
 
       <div class="form-group row">
         <%= label_tag :answer_nr11, "2:", class: "col-sm-2 col-form-label" %>
         <div class="col-sm-10">
-          <%= text_field_tag :answer_nr11, "", class: "form-control", placeholder: "vieta jusu atsakymui" %>
+
+          <%= link_to "tiesa", { controller: "home", action: "trigger1", choice: true }, class: "btn #{'btn-warning' if @team.answ11}" %>
+          <%= link_to "melas", { controller: "home", action: "trigger1", choice: false }, class: "btn #{'btn-warning' if !@team.answ11 && !@team.answ11.nil?}" %>
+
         </div>
       </div>
 
       <div class="form-group row">
         <%= label_tag :answer_nr12, "3:", class: "col-sm-2 col-form-label" %>
         <div class="col-sm-10">
-          <%= text_field_tag :answer_nr12, "", class: "form-control", placeholder: "vieta jusu atsakymui" %>
+          
+          <%= link_to "tiesa", { controller: "home", action: "trigger2", choice: true }, class: "btn #{'btn-warning' if @team.answ12}" %>
+          <%= link_to "melas", { controller: "home", action: "trigger2", choice: false }, class: "btn #{'btn-warning' if !@team.answ12 && !@team.answ12.nil?}" %>
+
         </div>
       </div>
 
      <div class="form-group row">
         <%= label_tag :answer_nr13, "4:", class: "col-sm-2 col-form-label" %>
         <div class="col-sm-10">
-          <%= text_field_tag :answer_nr13, "", class: "form-control", placeholder: "vieta jusu atsakymui" %>
+          
+          <%= link_to "tiesa", { controller: "home", action: "trigger3", choice: true }, class: "btn #{'btn-warning' if @team.answ13}" %>
+          <%= link_to "melas", { controller: "home", action: "trigger3", choice: false }, class: "btn #{'btn-warning' if !@team.answ13 && !@team.answ13.nil?}" %>
+
         </div>
       </div>
 
      <div class="form-group row">
         <%= label_tag :answer_nr14, "5:", class: "col-sm-2 col-form-label" %>
         <div class="col-sm-10">
-          <%= text_field_tag :answer_nr14, "", class: "form-control", placeholder: "vieta jusu atsakymui" %>
+          
+          <%= link_to "tiesa", { controller: "home", action: "trigger4", choice: true }, class: "btn #{'btn-warning' if @team.answ14}" %>
+          <%= link_to "melas", { controller: "home", action: "trigger4", choice: false }, class: "btn #{'btn-warning' if !@team.answ14 && !@team.answ14.nil?}" %>
+
         </div>
       </div>
 
      <div class="form-group row">
         <%= label_tag :answer_nr15, "6:", class: "col-sm-2 col-form-label" %>
         <div class="col-sm-10">
-          <%= text_field_tag :answer_nr15, "", class: "form-control", placeholder: "vieta jusu atsakymui" %>
+          
+          <%= link_to "tiesa", { controller: "home", action: "trigger5", choice: true }, class: "btn #{'btn-warning' if @team.answ15}" %>
+          <%= link_to "melas", { controller: "home", action: "trigger5", choice: false }, class: "btn #{'btn-warning' if !@team.answ15 && !@team.answ15.nil?}" %>
+
         </div>
       </div>
 
      <div class="form-group row">
         <%= label_tag :answer_nr16, "7:", class: "col-sm-2 col-form-label" %>
         <div class="col-sm-10">
-          <%= text_field_tag :answer_nr16, "", class: "form-control", placeholder: "vieta jusu atsakymui" %>
+          
+          <%= link_to "tiesa", { controller: "home", action: "trigger6", choice: true }, class: "btn #{'btn-warning' if @team.answ16}" %>
+          <%= link_to "melas", { controller: "home", action: "trigger6", choice: false }, class: "btn #{'btn-warning' if !@team.answ16 && !@team.answ16.nil?}" %>
+
         </div>
       </div>
 
      <div class="form-group row">
         <%= label_tag :answer_nr17, "8:", class: "col-sm-2 col-form-label" %>
         <div class="col-sm-10">
-          <%= text_field_tag :answer_nr17, "", class: "form-control", placeholder: "vieta jusu atsakymui" %>
+          
+          <%= link_to "tiesa", { controller: "home", action: "trigger7", choice: true }, class: "btn #{'btn-warning' if @team.answ17}" %>
+          <%= link_to "melas", { controller: "home", action: "trigger7", choice: false }, class: "btn #{'btn-warning' if !@team.answ17 && !@team.answ17.nil?}" %>
+
         </div>
       </div>
 
      <div class="form-group row">
         <%= label_tag :answer_nr18, "9:", class: "col-sm-2 col-form-label" %>
         <div class="col-sm-10">
-          <%= text_field_tag :answer_nr18, "", class: "form-control", placeholder: "vieta jusu atsakymui" %>
+          
+          <%= link_to "tiesa", { controller: "home", action: "trigger8", choice: true }, class: "btn #{'btn-warning' if @team.answ18}" %>
+          <%= link_to "melas", { controller: "home", action: "trigger8", choice: false }, class: "btn #{'btn-warning' if !@team.answ18 && !@team.answ18.nil?}" %>
+
         </div>
       </div>
 
      <div class="form-group row">
         <%= label_tag :answer_nr19, "10:", class: "col-sm-2 col-form-label" %>
         <div class="col-sm-10">
-          <%= text_field_tag :answer_nr19, "", class: "form-control", placeholder: "vieta jusu atsakymui" %>
+          
+          <%= link_to "tiesa", { controller: "home", action: "trigger9", choice: true }, class: "btn #{'btn-warning' if @team.answ19}" %>
+          <%= link_to "melas", { controller: "home", action: "trigger9", choice: false }, class: "btn #{'btn-warning' if !@team.answ19 && !@team.answ19.nil?}" %>
+
         </div>
       </div>
 

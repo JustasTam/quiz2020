@@ -1,0 +1,58 @@
+<section class="page-section">
+	<div class="container">
+
+		<div class="card mb-4">
+	  <div class="card-header"><i class="fas fa-table mr-1"></i>Statistika</div>
+	  <div class="card-body">
+	    <div class="table-responsive">
+	      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+	        <thead> 
+	          <tr>
+	            <th>Komanda</th>
+	            <th>1</th>
+	            <th>2</th>
+	            <th>3</th>
+	            <th>4</th>
+	            <th>5</th>
+	            <th>6</th>
+	            <th>7</th>
+	            <th>8</th>
+	            <th>9</th>
+	            <th>10</th>
+	        </thead>
+	        <tbody>
+
+            <tr>
+              <td><%= @team.name %></td>
+              <td><%= @answers[0] %></td>
+              <td><%= @answers[1] %></td>
+              <td><%= @answers[2] %></td>
+              <td><%= @answers[3] %></td>
+              <td><%= @answers[4] %></td>
+              <td><%= @answers[5] %></td>
+              <td><%= @answers[6] %></td>
+              <td><%= @answers[7] %></td>
+              <td><%= @answers[8] %></td>
+              <td><%= @answers[9] %></td>
+            </tr>
+
+	        </tbody>
+	      </table>
+	    </div>
+
+	    <%= form_tag admin_set_score_path, method: :post do %>
+		    <div class="form-group row">
+	        <%= label_tag :set_score, "Taskai:", class: "col-sm-3 col-form-label" %>
+	        <div class="col-sm-3">
+	          <%= text_field_tag :set_score, "", class: "form-control", placeholder: @score %>
+	        </div>
+
+	        <%= hidden_field_tag :round, @round %>
+	        <%= hidden_field_tag :team_id, @team.id  %>
+
+	        <%= submit_tag 'Set', class: "btn btn-primary", style: "float:right" %>
+	      </div>
+	    <% end %>
+
+  </div>
+</div>
