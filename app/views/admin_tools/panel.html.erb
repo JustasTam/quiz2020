@@ -85,7 +85,11 @@
   <script type="text/javascript">
     // Call the dataTables jQuery plugin
     $(document).ready(function() {
-      $('#dataTable').DataTable();
+      $('#dataTable').DataTable({
+        "paging": false,
+        "info": false,
+        "bFilter": false
+      });
     });    
 
     // $(document).ready(function() {

@@ -86,23 +86,23 @@ class AdminToolsController < ApplicationController
 		team = Team.find_by_id(params[:team_id])
 
 		if params[:round] == "1"
-			team.score1 = params[:set_score]
+			team.score1 = params[:set_score].present? ? params[:set_score] : team.score1
 			team.save
 		end
 		if params[:round] == "2"
-			team.score2 = params[:set_score]
+			team.score2 = params[:set_score].present? ? params[:set_score] : team.score2
 			team.save
 		end
 		if params[:round] == "3"
-			team.score3 = params[:set_score]
+			team.score3 = params[:set_score].present? ? params[:set_score] : team.score3
 			team.save
 		end
 		if params[:round] == "4"
-			team.score4 = params[:set_score]
+			team.score4 = params[:set_score].present? ? params[:set_score] : team.score4
 			team.save
 		end
 		if params[:round] == "5"
-			team.score5 = params[:set_score]
+			team.score5 = params[:set_score].present? ? params[:set_score] : team.score5
 			team.save
 		end
 
