@@ -1,0 +1,37 @@
+<section class="page-section">
+	<div class="container">
+
+		<div class="row">
+			<h5 style="padding-right: 10px"> Round 1</h5>
+	  	<%= button_to "#{@panel.round1}", { action: "trigger_round1" }, style: "background-color: #{@panel.round1 ? 'green' : 'gray'}" %>
+		</div>		
+
+		<div class="row">
+			<h5 style="padding-right: 10px"> Round 2</h5>
+	  	<%= button_to "#{@panel.round2}", { action: "trigger_round2" }, style: "background-color: #{@panel.round2 ? 'green' : 'gray'}" %>
+		</div>
+
+		<div class="row">
+			<h5 style="padding-right: 10px"> Round 3</h5>
+	  	<%= button_to "#{@panel.round3}", { action: "trigger_round3" }, style: "background-color: #{@panel.round3 ? 'green' : 'gray'}" %>
+		</div>
+
+		<div class="row">
+			<h5 style="padding-right: 10px"> Round 4</h5>
+	  	<%= button_to "#{@panel.round4}", { action: "trigger_round4" }, style: "background-color: #{@panel.round4 ? 'green' : 'gray'}" %>
+		</div>
+
+		<div class="row">
+			<h5 style="padding-right: 10px"> Round 5</h5>
+	  	<%= button_to "#{@panel.round5}", { action: "trigger_round5" }, style: "background-color: #{@panel.round5 ? 'green' : 'gray'}" %>
+		</div>
+
+
+	</div>
+</section>
+
+<style type="text/css">
+	.onoff {
+		color: black;
+	}
+</style>

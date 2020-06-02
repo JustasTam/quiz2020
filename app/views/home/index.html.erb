@@ -1,0 +1,29 @@
+<% if !@team.present? %>
+
+	<section class="page-section">
+		<div class="container">
+
+		<%= form_tag home_create_team_path, method: :post do %>
+
+			<div class="form-group">
+		    <%= label_tag(:team_name, "KOMANDOS PAVADINIMAS:") %>
+		    <%= text_field_tag :team_name, "", class: "form-control" %>
+
+		  </div>
+
+		  <%= submit_tag 'Submit', class: "btn btn-primary" %>
+		<% end %>
+
+		</div>
+
+	</section>
+
+<% else %>
+	<section class="page-section">
+		<div class="container">
+			<h5>Luktelk! Aciu!</h5>
+
+			<img src="https://media1.tenor.com/images/b4576f28b2864d0398441a19d1ee2ae8/tenor.gif?itemid=15844651">
+		</div>
+	</section>
+<% end %>
