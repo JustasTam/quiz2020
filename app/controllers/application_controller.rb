@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
 	def admin?
-		@ip=Socket.ip_address_list.detect{|intf| intf.ipv4_private?}
-		@ip.ip_address == "192.168.2.104"
+		Rails.logger.fatal "********"
+		Rails.logger.fatal request.remote_ip
+		Rails.logger.fatal "********"
+		request.remote_ip == "127.0.0.1"
 	end
 end

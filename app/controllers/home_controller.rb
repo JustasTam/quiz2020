@@ -104,7 +104,7 @@ class HomeController < ApplicationController
 	def create_team
 		team = Team.new
 		team.name = params[:team_name]
-		team.ip_adress = @ip
+		team.ip_adress = request.remote_ip
 		team.save
 
 		redirect_to root_path
@@ -192,13 +192,7 @@ class HomeController < ApplicationController
 
 	private
 
-	def check_ip
-    @ip=Socket.ip_address_list.detect{|intf| intf.ipv4_private?}
-		@ip = @ip.present? ? @ip.ip_address : "unknown"
-		return @ip
-	end
-
 	def set_team
-		@team = Team.find_by_ip_adress(check_ip)
+		@team = Team.find_by_ip_adress(request.remote_ip)
 	end
 end
